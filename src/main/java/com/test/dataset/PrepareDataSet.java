@@ -70,10 +70,12 @@ public class PrepareDataSet {
 
 
             ResultSet rs = queryPreparedStatement.executeQuery();
+            System.out.println("STATUSID           ORDERID        MERCHANTID");
             while (rs.next()){
                 int statusId = rs.getInt(1);
                 int orderId = rs.getInt(2);
                 int merchantId = rs.getInt(3);
+                System.out.println(statusId+"               "+orderId+"             "+merchantId);
             }
 
             rs.close();
