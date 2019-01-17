@@ -7,16 +7,19 @@ import java.util.List;
 
 public class PrepareDataSet {
     public static void main(String[] a){
+        // TODO: REMEMBER: The last payment id is for case : testCreateDisputeNotInDisputableState
         makeDisputeCancellable(Arrays.asList(
-                "000000170100002014160000100001",
-                "000000170100002014170000100001",
-                "000000170100002014180000100001",
-                "000000170100002014190000100001",
-                "000000170100002014200000100001",
-                "000000170100002014210000100001",
-                "000000170100002014220000100001",
-                "000000170100002014230000100001",
-                "000000170100002014240000100001"));
+                "000000170100002015900000100001",
+                "000000170100002015910000100001",
+                "000000170100002015920000100001",
+                "000000170100002015930000100001",
+                "000000170100002015940000100001",
+                "000000170100002015950000100001",
+                "000000170100002015960000100001",
+                "000000170100002015970000100001",
+                "000000170100002015980000100001",
+                "000000170100002015990000100001",
+                "000000170100002016000000100001"));
 
     }
 
@@ -32,7 +35,9 @@ public class PrepareDataSet {
             connection.setAutoCommit(false);
 
 
-            for (String paymentID : paymentIds) {
+
+            for (int count =0 ; count <paymentIds.size() - 1; count++) {
+                String paymentID = paymentIds.get(count);
                 merchantid = Integer.valueOf(paymentID.substring(0, 10)).toString();
                 String orderid = Integer.valueOf(paymentID.substring(10, 20)).toString();
                 orderIds.add(Integer.valueOf(orderid));
