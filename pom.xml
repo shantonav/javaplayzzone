@@ -7,7 +7,21 @@
     <groupId>com.test.interesting.problems</groupId>
     <artifactId>interesting-problems</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <properties>
+        <version.ojdbc>12.2.0.1</version.ojdbc>
+    </properties>
 <dependencies>
     <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependency>
@@ -15,6 +29,12 @@
         <artifactId>junit</artifactId>
         <version>4.12</version>
         <scope>test</scope>
+    </dependency>
+    <dependency>
+        <groupId>com.oracle.jdbc</groupId>
+        <artifactId>ojdbc8</artifactId>
+        <version>${version.ojdbc}</version>
+        <scope>runtime</scope>
     </dependency>
 
 </dependencies>
