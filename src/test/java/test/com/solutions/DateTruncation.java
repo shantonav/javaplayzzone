@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.UUID;
 
 public class DateTruncation {
 
@@ -21,9 +22,13 @@ public class DateTruncation {
 
         System.out.println(today.toString());
 
-        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        //SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-        System.out.println(sdf1.format(today));
+        //System.out.println(sdf1.format(today));
+
+        for (int i =0 ; i < 20 ; i++){
+            System.out.println(UUID.randomUUID().toString());
+        }
 
     }
 
