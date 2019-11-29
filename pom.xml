@@ -30,12 +30,9 @@
         <version>4.12</version>
         <scope>test</scope>
     </dependency>
-    <dependency>
-        <groupId>com.oracle.jdbc</groupId>
-        <artifactId>ojdbc8</artifactId>
-        <version>${version.ojdbc}</version>
-        <scope>runtime</scope>
-    </dependency>
+
+
+    <dependency> <groupId>com.googlecode.jcsv</groupId> <artifactId>jcsv</artifactId> <version>1.4.0</version> </dependency>
 
 </dependencies>
 </project>
