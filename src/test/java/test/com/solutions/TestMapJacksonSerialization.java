@@ -15,21 +15,25 @@ public class TestMapJacksonSerialization {
     public void testHashMapJsonSerialization() throws IOException {
 
         Map<String, Boolean> mapObject = new HashMap<>();
+        mapObject.put("1001", Boolean.TRUE);
         mapObject.put("1003", Boolean.TRUE);
-        mapObject.put("1005", Boolean.TRUE);
-        mapObject.put("1009", Boolean.TRUE);
+        mapObject.put("1005", Boolean.FALSE);
+        mapObject.put("1006", Boolean.TRUE);
+        mapObject.put("1007", Boolean.TRUE);
+        mapObject.put("1008", Boolean.TRUE);
+        mapObject.put("1009", Boolean.FALSE);
         mapObject.put("101", Boolean.TRUE);
-        mapObject.put("1014", Boolean.FALSE);
+        mapObject.put("1010", Boolean.TRUE);
+        mapObject.put("1011", Boolean.TRUE);
+        mapObject.put("1012", Boolean.FALSE);
+        mapObject.put("1013", Boolean.TRUE);
+        mapObject.put("1014", Boolean.TRUE);
         mapObject.put("1015", Boolean.TRUE);
-        mapObject.put("102", Boolean.FALSE);
-        mapObject.put("1021", Boolean.TRUE);
-        mapObject.put("1027", Boolean.TRUE);
-        mapObject.put("103", Boolean.TRUE);
-        mapObject.put("104", Boolean.TRUE);
-        mapObject.put("105", Boolean.TRUE);
-        mapObject.put("106", Boolean.TRUE);
-        mapObject.put("107", Boolean.FALSE);
-        mapObject.put("108", Boolean.TRUE);
+        mapObject.put("1016", Boolean.TRUE);
+        mapObject.put("1017", Boolean.TRUE);
+        mapObject.put("1018", Boolean.TRUE);
+        mapObject.put("1019", Boolean.FALSE);
+
 
         StringWriter sw = new StringWriter();
         ObjectMapper objectMapper = new ObjectMapper();
